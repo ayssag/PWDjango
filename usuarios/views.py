@@ -34,7 +34,7 @@ def cadastro(request):
             password=senha
         )
 
-        return redirect('./usuarios/logar')
+        return redirect('/usuarios/logar')
 
 def logar(request):
     if request.method == 'GET':
@@ -50,4 +50,4 @@ def logar(request):
             return redirect('/empresarios/cadastrar_empresa')
 
         messages.add_message(request, constants.ERROR, 'Usuário ou senha inválidos.')
-        return redirect('usuarios/logar')
+        return redirect('/usuarios/logar')
